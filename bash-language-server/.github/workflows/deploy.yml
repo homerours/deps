@@ -1,0 +1,36 @@
+name: Deploy server and extension
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: https://registry.npmjs.org/
+
+      - run: |
+          git config --local user.email "kenneth.skovhus@gmail.com"
+          git config --local user.name "skovhus"
+        name: Configure for pushing git tags
+
+      - run: bash scripts/release-client.sh
+        name: Deploy VS Code extension
+        env:
+          VSCE_TOKEN: ${{ secrets.VSCE_PERSONAL_ACCESS_TOKEN }}
+
+      - run: bash scripts/release-server.sh
+        name: Deploy server
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}

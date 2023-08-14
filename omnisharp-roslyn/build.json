@@ -1,0 +1,57 @@
+{
+    "DotNetInstallScriptURL": "https://dot.net/v1",
+    "DotNetChannel": "Preview",
+    "DotNetVersions": [
+        "6.0.203",
+        "7.0.302",
+        "8.0.100-preview.4.23260.5"
+    ],
+    "RequiredMonoVersion": "6.6.0",
+    "DownloadURL": "https://roslynomnisharp.blob.core.windows.net/ext",
+    "HostProjects": [
+        "OmniSharp.Stdio.Driver",
+        "OmniSharp.Http.Driver"
+    ],
+    "TestProjects": [
+        "OmniSharp.MSBuild.Tests",
+        "OmniSharp.Roslyn.CSharp.Tests",
+        "OmniSharp.Http.Tests",
+        "OmniSharp.Stdio.Tests",
+        "OmniSharp.DotNetTest.Tests",
+        "OmniSharp.Tests",
+        "OmniSharp.Cake.Tests",
+        "OmniSharp.Script.Tests",
+        "OmniSharp.Lsp.Tests"
+    ],
+    "TestAssets": [
+        "NUnitTestProject",
+        "XunitTestProject",
+        "MSTestProject",
+        "ProjectAndSolution",
+        "ProjectAndSolutionWithGlobs",
+        "ProjectAndSolutionWithProjectSection",
+        "TwoProjectsWithSolution",
+        "ProjectWithGeneratedFile",
+        "CSharpAndFSharp",
+        "ProjectWithMismatchedFileName",
+        "SolutionWithSignedProject",
+        "ProjectWithMultiTFMLib",
+        "ExternAlias",
+        "ProjectWithComplexAnalyzers",
+        "ProjectWithDisabledAnalyzers",
+        "ProjectWithDisabledAnalyzers2",
+        "ProjectWithAnalyzers",
+        "ProjectWithAnalyzersAndEditorConfig",
+        "ProjectWithParentEditorConfig",
+        "TwoProjectsWithAnalyzerSuppressor"
+    ],
+    "CakeTestAssets": [
+        "CakeProject"
+    ],
+    "WindowsOnlyTestAssets": [
+        "AntlrGeneratedFiles"
+    ],
+    "RestoreOnlyTestAssets": [
+        "ProjectWithMissingType"
+    ]
+}

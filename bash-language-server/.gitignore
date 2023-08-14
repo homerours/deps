@@ -1,0 +1,19 @@
+# Build output
+vscode-client/out
+server/out
+
+# Linter cache
+coverage/
+.eslintcache/
+.eslintcache
+
+# OS related
+.DS_Store
+*.log
+
+# NPM cache
+node_modules/
+package-lock.json
+
+# YARN cache
+.yarn/
